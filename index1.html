@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Počasí</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Weather</div>
+            <div class="nav-links">
+                <a href="#home">Domů</a>
+                <a href="#gallery">Galerie</a>
+                <a href="#login">Přihlášení</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2 id="home">Počasí podle města</h2>
+        
+        <div id="loader" class="loader"></div>
+
+        <form id="weatherForm" action="weather.php" method="GET">
+            <input type="text" name="city" placeholder="Název města" required>
+            <button type="submit">Zjistit počasí</button>
+        </form>
+
+        <div id="weatherResult"></div>
+
+        <button id="scrollTopBtn">↑</button>
+    </div>
+
+    <section id="gallery" class="container">
+        <h2>Galerie</h2>
+        <div class="gallery">
+            <a href="img1.jpg" data-lightbox="gallery"><img src="img1.jpg" alt="Image 1"></a>
+            <a href="img2.jpg" data-lightbox="gallery"><img src="img2.jpg" alt="Image 2"></a>
+            <a href="img3.jpg" data-lightbox="gallery"><img src="img3.jpg" alt="Image 3"></a>
+            <a href="img4.jpg" data-lightbox="gallery"><img src="img4.jpg" alt="Image 4"></a>
+        </div>
+    </section>
+
+    <section id="login" class="container">
+        <h2>Přihlášení</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Heslo:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Přihlásit se</button>
+        </form>
+    </section>
+
+    <footer>
+        <nav>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>O nás</h3>
+                    <p>Aplikace s počasím</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Odkazy</h3>
+                    <ul>
+                        <li><a href="#home">Domů</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#login">Přihlášení</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Kontakt</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Telefon: +420 123 456 789</p>
+                </div>
+            </div>
+        </nav>
+        <div class="footer-bottom">
+            <p>&copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
